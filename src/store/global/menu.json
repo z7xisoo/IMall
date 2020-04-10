@@ -1,0 +1,200 @@
+[
+  {
+    "role": "home",
+    "moduleName": "home",
+    "path": "/home",
+    "features": [
+      "view",
+      "edit"
+    ],
+    "submenu": [
+      {
+        "role": "home",
+        "moduleName": "home-1",
+        "path": "/home/home-1",
+        "features": [
+          "view"
+        ]
+      },
+      {
+        "role": "home",
+        "moduleName": "home-2",
+        "path": "/home/home-2",
+        "features": [
+          "view"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "detail",
+    "moduleName": "detail",
+    "path": "/detail",
+    "features": [
+      "view"
+    ],
+    "submenu": [
+      {
+        "role": "detail",
+        "moduleName": "detail-1",
+        "features": [
+          "view",
+          "edit"
+        ],
+        "path": "/detail/detail-1"
+      },
+      {
+        "role": "detail",
+        "moduleName": "detail-2",
+        "features": [
+          "view",
+          "edit"
+        ],
+        "path": "/detail/detail-2"
+      },
+      {
+        "role": "detail",
+        "moduleName": "detail-2",
+        "features": [
+          "view",
+          "edit"
+        ],
+        "path": "/detail/detail-2"
+      }
+    ]
+  },
+  {
+    "role": "log",
+    "moduleName": "log",
+    "features": [
+      "view",
+      "edit"
+    ],
+    "path": "/log",
+    "submenu": [
+      {
+        "role": "log",
+        "moduleName": "log-1",
+        "features": [
+          "view",
+          "edit"
+        ],
+        "path": "/log/log-1"
+      },
+      {
+        "role": "log",
+        "moduleName": "log-2",
+        "features": [
+          "view",
+          "edit"
+        ],
+        "path": "/log/log-2"
+      }
+    ]
+  },
+  {
+    "role": "center",
+    "moduleName": "center",
+    "features": [
+      "view",
+      "edit"
+    ],
+    "path": "/center"
+  },
+  {
+    "role": "log-Out",
+    "moduleName": "log-Out",
+    "features": [
+      "view",
+      "edit"
+    ],
+    "path": "/log-Out"
+  },
+  {
+    "role": "text",
+    "moduleName": "text",
+    "features": [
+      "view",
+      "edit"
+    ],
+    "path": "/text",
+    "submenu": [
+      {
+        "role": "text",
+        "moduleName": "text-1",
+        "features": [
+          "view",
+          "edit"
+        ],
+        "path": "/text/text-1"
+      },
+      {
+        "role": "text",
+        "moduleName": "text-2",
+        "features": [
+          "view",
+          "edit"
+        ],
+        "path": "/text/text-2"
+      }
+    ]
+  },
+  {
+    "role": "map",
+    "moduleName": "map",
+    "features": [
+      "view",
+      "edit"
+    ],
+    "path": "/map",
+    "submenu": [
+      {
+        "role": "map",
+        "moduleName": "map-1",
+        "features": [
+          "view",
+          "edit"
+        ],
+        "path": "/map/map-1"
+      },
+      {
+        "role": "map",
+        "moduleName": "map-2",
+        "features": [
+          "view",
+          "edit"
+        ],
+        "path": "/map/map-2"
+      }
+    ]
+  },
+  {
+    "role": "TTTT",
+    "moduleName": "TTTT",
+    "features": [
+      "view",
+      "edit"
+    ],
+    "path": "/TTTT",
+    "submenu": [
+      {
+        "role": "TTTT",
+        "moduleName": "TTTT-1",
+        "features": [
+          "view",
+          "edit"
+        ],
+        "path": "/TTTT/TTTT-1"
+      },
+      {
+        "role": "TTTT",
+        "moduleName": "TTTT-2",
+        "features": [
+          "view",
+          "edit"
+        ],
+        "path": "/TTTT/TTTT-2"
+      }
+    ]
+  }
+]
