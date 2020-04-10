@@ -60,39 +60,38 @@ export default {
     }
   },
   methods: {
-    ...mapActions(["getConfiguration","getToken"]),
+    ...mapActions(["getConfiguration", "getToken"]),
     handleSubmit(name) {
-      this.getToken().then(() => {
-        this.$router.push("/home");
+      this.$refs[name].validate(valid => {
+        if (valid) {
+          if (!localStorage.getItem("MyInfo")) {
+            this.$message({
+              message: "还未注册用户，请先注册用户!",
+              type: "warning"
+            });
+            return;
+          }
+          const { account, pwd, payCode } = JSON.parse(
+            localStorage.getItem("MyInfo")
+          );
+          const { account: oA, pwd: oW } = this.form;
+          // !account || !pwd || !payCode
+          if (account === oA && (pwd === oW || payCode === oW)) {
+            this.$message({
+              message: "登录成功，接下来进行动态路由配置及菜单配置",
+              type: "success"
+            });
+            this.getToken().then(() => {
+              this.$router.push("/home");
+            });
+          } else {
+            this.$message({
+              message: "账号或密码错误!",
+              type: "error"
+            });
+          }
+        }
       });
-      // this.$refs[name].validate(valid => {
-      //   if (valid) {
-      //     if (!localStorage.getItem('MyInfo')) {
-      //       this.$message({
-      //         message: "还未注册用户，请先注册用户!",
-      //         type: "warning"
-      //       });
-      //       return
-      //     }
-      //     const { account,pwd,payCode } = JSON.parse(localStorage.getItem('MyInfo'));
-      //     const { account:oA,pwd:oW } = this.form;
-      //     // !account || !pwd || !payCode
-      //     if (account === oA && ( pwd === oW || payCode === oW)) {
-      //       this.$message({
-      //         message: "登录成功，接下来进行动态路由配置及菜单配置",
-      //         type: "success"
-      //       });
-      //       this.$router.push("/home");
-      //       this.getAuthority().then((res) => {
-      //       })
-      //     }else{
-      //       this.$message({
-      //         message: "账号或密码错误!",
-      //         type: "error"
-      //       });
-      //     }
-      //   }
-      // });
     }
   }
 };
