@@ -2,8 +2,9 @@ import Vue from "vue";
 import router from "./router";
 import store from "./store";
 import App from "./App.vue";
+import "./directive";
 import ElementUI from 'element-ui';
-import './style/index.css'
+import './style/index.css';
 
 // 全局监听 会导致 登录直接进入  404 以及刷新后 直接进入 404
 // store 执行晚与 全局路由守卫
